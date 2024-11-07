@@ -228,9 +228,9 @@ names(images) <- nam # Reassigning image names
 mcols(images)[["imageID"]] <- nam # Reassigning image names
 ```
 
-# SimpleSeg: Segmentation
+# simpleSeg: Segmentation
 
-[SimpleSeg
+[simpleSeg
 Package](https://www.bioconductor.org/packages/release/bioc/html/simpleSeg.html)
 
 ## Run simpleSeg
@@ -847,7 +847,7 @@ How could results from `lisaClust` be used in conjunction with results from `spi
 [Statial
 Package](https://www.bioconductor.org/packages/release/bioc/html/Statial.html)
 
-## SpatioMark: Continuous changes in marker expression associated with varying levels of localisation.
+## SpatioMark
 
 The first step in analysing these changes is to calculate the spatial
 proximity (`getDistances`) of each cell to every cell type. These values
