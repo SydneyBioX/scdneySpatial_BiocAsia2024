@@ -251,9 +251,9 @@ run on the Bioconductor Galaxy servers.</p>
 </div>
 </div>
 <div class="section level2">
-<h2 id="simpleseg-segmentation">SimpleSeg: Segmentation<a class="anchor" aria-label="anchor" href="#simpleseg-segmentation"></a>
+<h2 id="simpleseg-segmentation">simpleSeg: Segmentation<a class="anchor" aria-label="anchor" href="#simpleseg-segmentation"></a>
 </h2>
-<p><a href="https://www.bioconductor.org/packages/release/bioc/html/simpleSeg.html" class="external-link">SimpleSeg
+<p><a href="https://www.bioconductor.org/packages/release/bioc/html/simpleSeg.html" class="external-link">simpleSeg
 Package</a></p>
 <div class="section level3">
 <h3 id="run-simpleseg">Run simpleSeg<a class="anchor" aria-label="anchor" href="#run-simpleseg"></a>
@@ -414,7 +414,7 @@ in the function <code><a href="https://rdrr.io/pkg/SpatialDatasets/man/SpatialDa
 <span></span>
 <span><span class="va">cells</span><span class="op">$</span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SpatialExperiment/man/SpatialExperiment-methods.html" class="external-link">spatialCoords</a></span><span class="op">(</span><span class="va">cells</span><span class="op">)</span><span class="op">[</span>, <span class="st">"x"</span><span class="op">]</span></span>
 <span><span class="va">cells</span><span class="op">$</span><span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SpatialExperiment/man/SpatialExperiment-methods.html" class="external-link">spatialCoords</a></span><span class="op">(</span><span class="va">cells</span><span class="op">)</span><span class="op">[</span>, <span class="st">"y"</span><span class="op">]</span></span></code></pre></div>
-<p>Time for this code chunk to run: 2.74 seconds</p>
+<p>Time for this code chunk to run: 2.73 seconds</p>
 <div class="section level3">
 <h3 id="normalise-the-data">Normalise the data<a class="anchor" aria-label="anchor" href="#normalise-the-data"></a>
 </h3>
@@ -475,7 +475,7 @@ images.</p>
 <span>  colour_by <span class="op">=</span> <span class="st">"imageID"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/umap-1.png" width="700">Time
-for this code chunk to run: 100.17 seconds</p>
+for this code chunk to run: 95.78 seconds</p>
 <p>We can transform and normalise our data using the
 <code>normalizeCells</code> function. In the
 <code><a href="https://sydneybiox.github.io/simpleSeg/reference/normalizeCells.html" class="external-link">normalizeCells()</a></code> function, we specify the following
@@ -515,7 +515,7 @@ at least observe a clear CD3+ peak at 1.00, and a CD3- peak at around
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/normalisation-1.png" width="768">Time
-for this code chunk to run: 8.48 seconds</p>
+for this code chunk to run: 7.83 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <p>Can we see what is a CD3+ vs a CD3- cell here?</p>
@@ -539,7 +539,7 @@ for this code chunk to run: 8.48 seconds</p>
 <span>  colour_by <span class="op">=</span> <span class="st">"imageID"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/norm-umap-1.png" width="700">Time
-for this code chunk to run: 104.51 seconds</p>
+for this code chunk to run: 98.51 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -573,7 +573,7 @@ clusters under <code>numClusters</code>.</p>
 <span>  assay <span class="op">=</span> <span class="st">"norm"</span>,</span>
 <span>  numClusters <span class="op">=</span> <span class="fl">10</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 3.29 seconds</p>
+<p>Time for this code chunk to run: 3.24 seconds</p>
 <p>We can also observe how reasonable our choice of <code>k = 10</code>
 was, using the <code><a href="https://rdrr.io/pkg/FuseSOM/man/estimateNumCluster.html" class="external-link">estimateNumCluster()</a></code> and
 <code><a href="https://rdrr.io/pkg/FuseSOM/man/optiPlot.html" class="external-link">optiPlot()</a></code> functions. Here we examine the Gap method, but
@@ -767,7 +767,7 @@ distinct spatial ordering.</p>
 <span>  cellType <span class="op">=</span> <span class="st">"cellType"</span>,</span>
 <span>  BPPARAM <span class="op">=</span> <span class="va">BPPARAM</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 36.68 seconds</p>
+<p>Time for this code chunk to run: 36.5 seconds</p>
 <p>To save time the results of the above code have been saved and can be
 loaded in.</p>
 <div class="section level3">
@@ -807,7 +807,7 @@ type calls.</p>
 <span>  nbp <span class="op">=</span> <span class="fl">300</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/hatchingPlot-1.png" width="700">Time
-for this code chunk to run: 66.06 seconds</p>
+for this code chunk to run: 71.16 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -834,12 +834,12 @@ status.</p>
 <span>  type <span class="op">=</span> <span class="st">"ttest"</span><span class="op">)</span></span>
 <span></span>
 <span><span class="va">testRegion</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;          mean in group NP mean in group P tval.t pval adjPval  cluster</span></span>
-<span><span class="co">#&gt; region_3            0.590           0.640  -1.20 0.24    0.47 region_3</span></span>
-<span><span class="co">#&gt; region_2            0.052           0.039   0.96 0.34    0.47 region_2</span></span>
-<span><span class="co">#&gt; region_1            0.140           0.120   0.73 0.47    0.47 region_1</span></span>
-<span><span class="co">#&gt; region_4            0.210           0.200   0.73 0.47    0.47 region_4</span></span></code></pre>
-<p>Time for this code chunk to run: 0.2 seconds</p>
+<pre><code><span><span class="co">#&gt;          mean in group NP mean in group P tval.t  pval adjPval  cluster</span></span>
+<span><span class="co">#&gt; region_1            0.022          0.0079   1.90 0.066    0.20 region_1</span></span>
+<span><span class="co">#&gt; region_3            0.092          0.1300  -1.70 0.100    0.20 region_3</span></span>
+<span><span class="co">#&gt; region_4            0.340          0.3300   0.63 0.530    0.71 region_4</span></span>
+<span><span class="co">#&gt; region_2            0.540          0.5400   0.20 0.840    0.84 region_2</span></span></code></pre>
+<p>Time for this code chunk to run: 0.19 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <p>How could results from <code>lisaClust</code> be used in conjunction
@@ -853,8 +853,7 @@ with results from <code>spicyR</code>?</p>
 <p><a href="https://www.bioconductor.org/packages/release/bioc/html/Statial.html" class="external-link">Statial
 Package</a></p>
 <div class="section level3">
-<h3 id="spatiomark-continuous-changes-in-marker-expression-associated-with-varying-levels-of-localisation-">SpatioMark: Continuous changes in marker expression associated with
-varying levels of localisation.<a class="anchor" aria-label="anchor" href="#spatiomark-continuous-changes-in-marker-expression-associated-with-varying-levels-of-localisation-"></a>
+<h3 id="spatiomark">SpatioMark<a class="anchor" aria-label="anchor" href="#spatiomark"></a>
 </h3>
 <p>The first step in analysing these changes is to calculate the spatial
 proximity (<code>getDistances</code>) of each cell to every cell type.
@@ -870,7 +869,7 @@ further explored within the <code>Statial</code> package vignette</p>
 <span>  cellType <span class="op">=</span> <span class="st">"cellType"</span>,</span>
 <span>  spatialCoords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 7.33 seconds</p>
+<p>Time for this code chunk to run: 6.95 seconds</p>
 <p>We can then visualise an example image, specified with
 <code>image = "F3"</code> and a particular marker interaction with cell
 type localisation. To visualise these changes, we specify two cell types
@@ -922,28 +921,28 @@ across the entire dataset.</p>
 <span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/utils/head.html" class="external-link">head</a></span><span class="op">(</span><span class="va">state_dist</span><span class="op">[</span><span class="va">state_dist</span><span class="op">$</span><span class="va">imageID</span> <span class="op">==</span> <span class="st">"F3"</span>,<span class="op">]</span>, n <span class="op">=</span> <span class="fl">10</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt;       imageID primaryCellType otherCellType     marker          coef      tval</span></span>
-<span><span class="co">#&gt; 51810      F3              SC            EP podoplanin -0.0006911103 -16.90036</span></span>
+<span><span class="co">#&gt; 51990      F3              SC            EP podoplanin -0.0006911103 -16.90036</span></span>
 <span><span class="co">#&gt; 23703      F3              EP            GC      CXCR3  0.0012103305  15.04988</span></span>
 <span><span class="co">#&gt; 23704      F3              EP            GC     pSTAT3  0.0012299816  14.79933</span></span>
 <span><span class="co">#&gt; 51978      F3              SC            GC       PDL2  0.0008802428  13.12601</span></span>
 <span><span class="co">#&gt; 23669      F3              EP            MC       CCR7  0.0011476888  13.32900</span></span>
-<span><span class="co">#&gt; 23775      F3              EP        TC_CD8      CXCR3  0.0016741880  12.95156</span></span>
+<span><span class="co">#&gt; 23595      F3              EP        TC_CD8      CXCR3  0.0016741880  12.95156</span></span>
 <span><span class="co">#&gt; 51981      F3              SC            GC       ICOS  0.0005186181  11.75830</span></span>
 <span><span class="co">#&gt; 23696      F3              EP            GC      CADM1  0.0011398625  12.18028</span></span>
 <span><span class="co">#&gt; 11426      F3              EC            GC       CD31  0.0010070252  12.40866</span></span>
-<span><span class="co">#&gt; 23758      F3              EP            EC       TIM3  0.0033539928  12.05028</span></span>
+<span><span class="co">#&gt; 23650      F3              EP            EC       TIM3  0.0033539928  12.05028</span></span>
 <span><span class="co">#&gt;               pval          fdr</span></span>
-<span><span class="co">#&gt; 51810 4.203881e-59 9.004712e-57</span></span>
+<span><span class="co">#&gt; 51990 4.203881e-59 9.004712e-57</span></span>
 <span><span class="co">#&gt; 23703 8.041089e-41 8.191646e-39</span></span>
 <span><span class="co">#&gt; 23704 8.916789e-40 8.712976e-38</span></span>
 <span><span class="co">#&gt; 51978 1.839014e-37 1.637728e-35</span></span>
 <span><span class="co">#&gt; 23669 9.360248e-34 6.863845e-32</span></span>
-<span><span class="co">#&gt; 23775 3.025912e-32 2.085497e-30</span></span>
+<span><span class="co">#&gt; 23595 3.025912e-32 2.085497e-30</span></span>
 <span><span class="co">#&gt; 51981 1.113579e-30 7.070268e-29</span></span>
 <span><span class="co">#&gt; 23696 3.239532e-29 1.903862e-27</span></span>
 <span><span class="co">#&gt; 11426 4.839241e-29 2.825645e-27</span></span>
-<span><span class="co">#&gt; 23758 1.030900e-28 5.930114e-27</span></span></code></pre>
-<p>Time for this code chunk to run: 6.08 seconds</p>
+<span><span class="co">#&gt; 23650 1.030900e-28 5.930114e-27</span></span></code></pre>
+<p>Time for this code chunk to run: 5.81 seconds</p>
 <p>The results from our SpatioMark outputs can be converted from a
 <code>data.frame</code> to a <code>matrix</code>, using the
 <code><a href="https://sydneybiox.github.io/Statial/reference/prepMatrix.html" class="external-link">prepMatrix()</a></code> function. Note, the choice of extracting
@@ -1010,7 +1009,7 @@ for FDR.</p>
 <span></span>
 <span><span class="co"># Create data frame with all pairwise combinations of cells</span></span>
 <span><span class="va">treeDf</span> <span class="op">=</span> <span class="fu">Statial</span><span class="fu">::</span><span class="fu"><a href="https://sydneybiox.github.io/Statial/reference/parentCombinations.html" class="external-link">parentCombinations</a></span><span class="op">(</span><span class="va">all</span>, parentList <span class="op">=</span> <span class="va">parentList</span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 1.4 seconds</p>
+<p>Time for this code chunk to run: 1.28 seconds</p>
 <div class="sourceCode" id="cb46"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kontext</span> <span class="op">=</span> <span class="fu">Statial</span><span class="fu">::</span><span class="fu"><a href="https://sydneybiox.github.io/Statial/reference/Kontextual.html" class="external-link">Kontextual</a></span><span class="op">(</span></span>
 <span>  cells <span class="op">=</span> <span class="va">cells</span>,</span>
@@ -1043,7 +1042,7 @@ so we use the <code>alternateResult</code> argument.</p>
 <span><span class="co"># Plot results</span></span>
 <span><span class="fu"><a href="https://sydneybiox.github.io/spicyR/reference/signifPlot.html" class="external-link">signifPlot</a></span><span class="op">(</span><span class="va">kontextOutcome</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/kontextOutcome-1.png" width="960">Time
-for this code chunk to run: 8.22 seconds</p>
+for this code chunk to run: 8.1 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -1061,61 +1060,61 @@ you?</li>
 <code class="sourceCode R"><span><span class="fu">spicyR</span><span class="fu">::</span><span class="fu"><a href="https://sydneybiox.github.io/spicyR/reference/signifPlot.html" class="external-link">signifPlot</a></span><span class="op">(</span><span class="va">spicyTest</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/viewingKontextual-1.png" width="700"></p>
 <div class="sourceCode" id="cb50"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="va">relationship</span> <span class="op">=</span> <span class="st">"TC_CD4__EC__parent_5"</span></span>
-<span><span class="va">image</span> <span class="op">=</span> <span class="st">"G4"</span></span>
+<code class="sourceCode R"><span><span class="va">relationship</span> <span class="op">=</span> <span class="st">"DC__MC__parent_1"</span></span>
+<span><span class="va">image</span> <span class="op">=</span> <span class="st">"A4"</span></span>
 <span></span>
 <span><span class="va">kontext</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">test</span> <span class="op">==</span> <span class="va">relationship</span><span class="op">)</span></span></code></pre></div>
-<pre><code><span><span class="co">#&gt;    imageID                 test     original  kontextual  r inhomL</span></span>
-<span><span class="co">#&gt; 1       A2 TC_CD4__EC__parent_5   7.68160860   6.5066053 50  FALSE</span></span>
-<span><span class="co">#&gt; 2       A3 TC_CD4__EC__parent_5   2.23350953   3.4434658 50  FALSE</span></span>
-<span><span class="co">#&gt; 3       A4 TC_CD4__EC__parent_5  -0.08701334   6.3304807 50  FALSE</span></span>
-<span><span class="co">#&gt; 4       A5 TC_CD4__EC__parent_5  -0.57639962   4.5311090 50  FALSE</span></span>
-<span><span class="co">#&gt; 5       A6 TC_CD4__EC__parent_5  10.02403012   7.5150350 50  FALSE</span></span>
-<span><span class="co">#&gt; 6       B1 TC_CD4__EC__parent_5  10.87585261  14.2134530 50  FALSE</span></span>
-<span><span class="co">#&gt; 7       B2 TC_CD4__EC__parent_5   5.06002008   5.9931607 50  FALSE</span></span>
-<span><span class="co">#&gt; 8      B21 TC_CD4__EC__parent_5  -0.39959694   0.1112766 50  FALSE</span></span>
-<span><span class="co">#&gt; 9       B3 TC_CD4__EC__parent_5   5.23542623   8.0275823 50  FALSE</span></span>
-<span><span class="co">#&gt; 10      B4 TC_CD4__EC__parent_5  -0.66071472  -0.1844264 50  FALSE</span></span>
-<span><span class="co">#&gt; 11      B6 TC_CD4__EC__parent_5   9.16587133   8.8867521 50  FALSE</span></span>
-<span><span class="co">#&gt; 12      C1 TC_CD4__EC__parent_5   9.40908266   8.2981051 50  FALSE</span></span>
-<span><span class="co">#&gt; 13      C2 TC_CD4__EC__parent_5  11.04803399   2.7263300 50  FALSE</span></span>
-<span><span class="co">#&gt; 14      C3 TC_CD4__EC__parent_5   9.22058958   9.5992764 50  FALSE</span></span>
-<span><span class="co">#&gt; 15      C4 TC_CD4__EC__parent_5  13.43380132   5.4622749 50  FALSE</span></span>
-<span><span class="co">#&gt; 16      D2 TC_CD4__EC__parent_5  10.12907090  12.3327148 50  FALSE</span></span>
-<span><span class="co">#&gt; 17      D3 TC_CD4__EC__parent_5  42.43221968  19.7863298 50  FALSE</span></span>
-<span><span class="co">#&gt; 18      D4 TC_CD4__EC__parent_5   6.50868799   5.7006945 50  FALSE</span></span>
-<span><span class="co">#&gt; 19      D5 TC_CD4__EC__parent_5   9.78058152   8.1404195 50  FALSE</span></span>
-<span><span class="co">#&gt; 20      D6 TC_CD4__EC__parent_5   4.28348294   7.1094799 50  FALSE</span></span>
-<span><span class="co">#&gt; 21      E1 TC_CD4__EC__parent_5  14.76511580   2.7278164 50  FALSE</span></span>
-<span><span class="co">#&gt; 22      F3 TC_CD4__EC__parent_5 -14.09044015 -17.7783051 50  FALSE</span></span>
-<span><span class="co">#&gt; 23      F4 TC_CD4__EC__parent_5 -15.53759618 -18.9689276 50  FALSE</span></span>
-<span><span class="co">#&gt; 24      F5 TC_CD4__EC__parent_5 -12.86245147 -14.6367869 50  FALSE</span></span>
-<span><span class="co">#&gt; 25      G4 TC_CD4__EC__parent_5  -2.39530472   2.3617033 50  FALSE</span></span>
-<span><span class="co">#&gt; 26      G5 TC_CD4__EC__parent_5   5.51623888  10.5583310 50  FALSE</span></span>
-<span><span class="co">#&gt; 27      G6 TC_CD4__EC__parent_5   4.33164604   4.7053925 50  FALSE</span></span>
-<span><span class="co">#&gt; 28      H1 TC_CD4__EC__parent_5   1.94802803   7.4361377 50  FALSE</span></span>
-<span><span class="co">#&gt; 29      H2 TC_CD4__EC__parent_5  13.35930713  13.0588006 50  FALSE</span></span>
-<span><span class="co">#&gt; 30      H3 TC_CD4__EC__parent_5   1.34443428   5.0182459 50  FALSE</span></span>
-<span><span class="co">#&gt; 31      H4 TC_CD4__EC__parent_5   7.54306921   3.3522477 50  FALSE</span></span>
-<span><span class="co">#&gt; 32      H5 TC_CD4__EC__parent_5  -5.21413323  -0.9181290 50  FALSE</span></span>
-<span><span class="co">#&gt; 33      H6 TC_CD4__EC__parent_5   1.66543198   5.6357928 50  FALSE</span></span>
-<span><span class="co">#&gt; 34      I1 TC_CD4__EC__parent_5   2.68026706   9.4393784 50  FALSE</span></span>
-<span><span class="co">#&gt; 35      I2 TC_CD4__EC__parent_5   9.77724059  16.0998082 50  FALSE</span></span>
-<span><span class="co">#&gt; 36      I3 TC_CD4__EC__parent_5  33.93318280   7.6225714 50  FALSE</span></span>
-<span><span class="co">#&gt; 37      I4 TC_CD4__EC__parent_5  32.63243351  19.1496354 50  FALSE</span></span>
-<span><span class="co">#&gt; 38      I5 TC_CD4__EC__parent_5  25.11060806   9.8891406 50  FALSE</span></span>
-<span><span class="co">#&gt; 39      J3 TC_CD4__EC__parent_5  23.47187850  23.5485701 50  FALSE</span></span>
-<span><span class="co">#&gt; 40      J4 TC_CD4__EC__parent_5  23.69363791  22.2011439 50  FALSE</span></span>
-<span><span class="co">#&gt; 41      J5 TC_CD4__EC__parent_5   6.56434930   5.9825165 50  FALSE</span></span>
-<span><span class="co">#&gt; 42      J6 TC_CD4__EC__parent_5   2.98025405   2.9704760 50  FALSE</span></span>
-<span><span class="co">#&gt; 43      K1 TC_CD4__EC__parent_5  -1.60932447   0.2013516 50  FALSE</span></span>
-<span><span class="co">#&gt; 44      K2 TC_CD4__EC__parent_5   4.00813298   4.2639758 50  FALSE</span></span></code></pre>
+<pre><code><span><span class="co">#&gt;    imageID             test    original  kontextual  r inhomL</span></span>
+<span><span class="co">#&gt; 1       A2 DC__MC__parent_1          NA          NA 50  FALSE</span></span>
+<span><span class="co">#&gt; 2       A3 DC__MC__parent_1          NA          NA 50  FALSE</span></span>
+<span><span class="co">#&gt; 3       A4 DC__MC__parent_1  -1.2198675   4.3620608 50  FALSE</span></span>
+<span><span class="co">#&gt; 4       A5 DC__MC__parent_1   4.9391183  13.7580084 50  FALSE</span></span>
+<span><span class="co">#&gt; 5       A6 DC__MC__parent_1   4.8588481  21.5756601 50  FALSE</span></span>
+<span><span class="co">#&gt; 6       B1 DC__MC__parent_1   1.4916789  14.6484380 50  FALSE</span></span>
+<span><span class="co">#&gt; 7       B2 DC__MC__parent_1  42.0245591  42.4761851 50  FALSE</span></span>
+<span><span class="co">#&gt; 8      B21 DC__MC__parent_1  18.7324922  11.7984102 50  FALSE</span></span>
+<span><span class="co">#&gt; 9       B3 DC__MC__parent_1  -5.7037591 -11.1252409 50  FALSE</span></span>
+<span><span class="co">#&gt; 10      B4 DC__MC__parent_1   5.7735201   7.3325112 50  FALSE</span></span>
+<span><span class="co">#&gt; 11      B6 DC__MC__parent_1  -3.0038293  -4.5809347 50  FALSE</span></span>
+<span><span class="co">#&gt; 12      C1 DC__MC__parent_1  -3.0485103  -3.9483082 50  FALSE</span></span>
+<span><span class="co">#&gt; 13      C2 DC__MC__parent_1   9.6928669   2.9790645 50  FALSE</span></span>
+<span><span class="co">#&gt; 14      C3 DC__MC__parent_1   3.5870170   8.5049826 50  FALSE</span></span>
+<span><span class="co">#&gt; 15      C4 DC__MC__parent_1   4.9411490   3.5646171 50  FALSE</span></span>
+<span><span class="co">#&gt; 16      D2 DC__MC__parent_1 -20.0201139 -16.3681840 50  FALSE</span></span>
+<span><span class="co">#&gt; 17      D3 DC__MC__parent_1  -7.4228765 -10.0050620 50  FALSE</span></span>
+<span><span class="co">#&gt; 18      D4 DC__MC__parent_1   7.3041191  12.7749710 50  FALSE</span></span>
+<span><span class="co">#&gt; 19      D5 DC__MC__parent_1  17.0540227  15.7993752 50  FALSE</span></span>
+<span><span class="co">#&gt; 20      D6 DC__MC__parent_1  -6.0189812  -3.6871048 50  FALSE</span></span>
+<span><span class="co">#&gt; 21      E1 DC__MC__parent_1  24.2134521  23.7525460 50  FALSE</span></span>
+<span><span class="co">#&gt; 22      F3 DC__MC__parent_1  19.9966298  15.6131758 50  FALSE</span></span>
+<span><span class="co">#&gt; 23      F4 DC__MC__parent_1  10.9176333  15.4254430 50  FALSE</span></span>
+<span><span class="co">#&gt; 24      F5 DC__MC__parent_1  18.8820455  33.1354772 50  FALSE</span></span>
+<span><span class="co">#&gt; 25      G4 DC__MC__parent_1  -1.5974267  -1.7029526 50  FALSE</span></span>
+<span><span class="co">#&gt; 26      G5 DC__MC__parent_1  36.5752016  48.1433899 50  FALSE</span></span>
+<span><span class="co">#&gt; 27      G6 DC__MC__parent_1  -5.0998227  -5.0921937 50  FALSE</span></span>
+<span><span class="co">#&gt; 28      H1 DC__MC__parent_1  -7.1141532   0.7983119 50  FALSE</span></span>
+<span><span class="co">#&gt; 29      H2 DC__MC__parent_1   2.6489041   8.3324522 50  FALSE</span></span>
+<span><span class="co">#&gt; 30      H3 DC__MC__parent_1  20.3715132  31.8401893 50  FALSE</span></span>
+<span><span class="co">#&gt; 31      H4 DC__MC__parent_1  13.4471471  16.6023987 50  FALSE</span></span>
+<span><span class="co">#&gt; 32      H5 DC__MC__parent_1   2.9177892  15.6049344 50  FALSE</span></span>
+<span><span class="co">#&gt; 33      H6 DC__MC__parent_1  -2.7544379  -0.2669482 50  FALSE</span></span>
+<span><span class="co">#&gt; 34      I1 DC__MC__parent_1  12.6469476  17.3885399 50  FALSE</span></span>
+<span><span class="co">#&gt; 35      I2 DC__MC__parent_1  -3.7060034   4.1567045 50  FALSE</span></span>
+<span><span class="co">#&gt; 36      I3 DC__MC__parent_1  34.9020933  11.2716509 50  FALSE</span></span>
+<span><span class="co">#&gt; 37      I4 DC__MC__parent_1  17.5909949  15.3714102 50  FALSE</span></span>
+<span><span class="co">#&gt; 38      I5 DC__MC__parent_1  29.7187708  20.4201482 50  FALSE</span></span>
+<span><span class="co">#&gt; 39      J3 DC__MC__parent_1  18.4084451  33.6605655 50  FALSE</span></span>
+<span><span class="co">#&gt; 40      J4 DC__MC__parent_1  -7.2197007   1.3456391 50  FALSE</span></span>
+<span><span class="co">#&gt; 41      J5 DC__MC__parent_1  -3.9792716  -1.8509027 50  FALSE</span></span>
+<span><span class="co">#&gt; 42      J6 DC__MC__parent_1   0.7816835   4.4492464 50  FALSE</span></span>
+<span><span class="co">#&gt; 43      K1 DC__MC__parent_1  -3.7436428  -1.2394727 50  FALSE</span></span>
+<span><span class="co">#&gt; 44      K2 DC__MC__parent_1  10.1971570  14.0565621 50  FALSE</span></span></code></pre>
 <div class="sourceCode" id="cb52"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="co"># Function from inst/extdata/utils.R file</span></span>
 <span><span class="fu">plotKontextual</span><span class="op">(</span><span class="va">relationship</span>, imageChoose <span class="op">=</span> <span class="va">image</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/viewingKontextual-2.png" width="700">Time
-for this code chunk to run: 0.92 seconds</p>
+for this code chunk to run: 0.88 seconds</p>
 </div>
 </div>
 <div class="section level2">
@@ -1164,7 +1163,7 @@ from <code>SpatioMark</code></p>
 <span></span>
 <span><span class="co"># Add Kontextual features</span></span>
 <span><span class="va">data</span><span class="op">[[</span><span class="st">"Kontextual"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">kontextMat</span></span></code></pre></div>
-<p>Time for this code chunk to run: 0.11 seconds</p>
+<p>Time for this code chunk to run: 0.1 seconds</p>
 <p>We have saved the data list and outcomes for convenience.</p>
 <div class="sourceCode" id="cb54"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"data.rda"</span>, package <span class="op">=</span> <span class="st">"scdneySpatialBiocAsia2024"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -1213,7 +1212,7 @@ AUC from each repeat of the 5-fold cross-validation.</p>
 <pre><code><span><span class="co">#&gt; TableGrob (2 x 1) "arrange": 2 grobs</span></span>
 <span><span class="co">#&gt;   z     cells    name                 grob</span></span>
 <span><span class="co">#&gt; 1 1 (2-2,1-1) arrange       gtable[layout]</span></span>
-<span><span class="co">#&gt; 2 2 (1-1,1-1) arrange text[GRID.text.2344]</span></span></code></pre>
+<span><span class="co">#&gt; 2 2 (1-1,1-1) arrange text[GRID.text.2314]</span></span></code></pre>
 <p>The following code chunk demonstrates how we might use information
 from multiple matrices to perform classification.</p>
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
@@ -1280,7 +1279,7 @@ from multiple matrices to perform classification.</p>
 <span><span class="co">#&gt; [21] ClassifyR_3.10.0                survival_3.7-0                 </span></span>
 <span><span class="co">#&gt; [23] BiocParallel_1.40.0             MultiAssayExperiment_1.32.0    </span></span>
 <span><span class="co">#&gt; [25] generics_0.1.3                  Statial_1.8.0                  </span></span>
-<span><span class="co">#&gt; [27] spicyR_1.18.0                   lisaClust_1.14.0               </span></span>
+<span><span class="co">#&gt; [27] spicyR_1.18.0                   lisaClust_1.14.4               </span></span>
 <span><span class="co">#&gt; [29] FuseSOM_1.8.0                   simpleSeg_1.8.0                </span></span>
 <span><span class="co">#&gt; [31] SpatialDatasets_1.4.0           SpatialExperiment_1.16.0       </span></span>
 <span><span class="co">#&gt; [33] SingleCellExperiment_1.28.0     SummarizedExperiment_1.36.0    </span></span>
