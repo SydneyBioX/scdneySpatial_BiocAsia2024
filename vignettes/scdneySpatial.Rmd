@@ -1026,8 +1026,9 @@ signifPlot(kontextOutcome)
 ```{r viewingKontextual, time_it = TRUE}
 spicyR::signifPlot(spicyTest)
 
-relationship = "TC_CD4__EC__parent_5"
-image = "G4"
+
+relationship = "DC__MC__parent_1"
+image = "A4"
 
 kontext |> 
   filter(test == relationship)

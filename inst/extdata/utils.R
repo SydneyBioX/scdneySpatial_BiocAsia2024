@@ -2,14 +2,14 @@
 #' @import tidyverse
 #' @import tidySingleCellExperiment
 #' @import SingleCellExperiment
-plotKontextual = function(test, imageChoose) {
+plotKontextual = function(relationship, imageChoose) {
   
-  test_split = stringr::str_split(test, "__")[[1]]
+  test_split = stringr::str_split(relationship, "__")[[1]]
   to = test_split[[1]]
   from = test_split[[2]]
   parent = parentList[[test_split[[3]]]]
   kontextVal = kontext |> 
-    filter(test == test) |> 
+    filter(test == relationship) |> 
     filter(imageID == imageChoose)
   
   cells |>
