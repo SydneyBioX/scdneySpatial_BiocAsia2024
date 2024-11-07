@@ -226,7 +226,7 @@ use our spicy workflow to reach a similar conclusion.</p>
 <span><span class="va">BPPARAM</span> <span class="op">&lt;-</span> <span class="fu">simpleSeg</span><span class="fu">:::</span><span class="fu"><a href="https://sydneybiox.github.io/simpleSeg/reference/generateBPParam.html" class="external-link">generateBPParam</a></span><span class="op">(</span><span class="va">nCores</span><span class="op">)</span></span>
 <span><span class="kw"><a href="https://rdrr.io/r/base/source.html" class="external-link">source</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"utils.R"</span>, package <span class="op">=</span> <span class="st">"scdneySpatialBiocAsia2024"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="fu"><a href="https://rdrr.io/r/base/options.html" class="external-link">options</a></span><span class="op">(</span><span class="st">"restore_SingleCellExperiment_show"</span> <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 16.22 seconds</p>
+<p>Time for this code chunk to run: 15.69 seconds</p>
 </div>
 <div class="section level4">
 <h4 id="download-images">Download images<a class="anchor" aria-label="anchor" href="#download-images"></a>
@@ -352,8 +352,7 @@ nuclei.</p>
 <span>             HH3 <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">1</span>, <span class="fl">1</span>, <span class="fl">2</span><span class="op">)</span></span>
 <span>           <span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Time for this code chunk to run: 0 seconds</p>
-<p><img src="..%2F..%2F..%2F..%2Ftmp%2FRtmp9fPDfQ%2Ftemp_libpath7ac71eeb1b9%2FscdneySpatialBiocAsia2024%2Fimages%2Fsee-seg-nuclei-1.png" width="672">Time
-for this code chunk to run: 0.03 seconds</p>
+<p><img src="reference/figures/see-seg-nuclei-1.png" style="border: 0px"></p>
 <p>If you wish to visualise multiple markers instead of just the HH3
 marker and see how the segmentation mask performs, this can also be
 done. Here, we can see that our segmentation mask has done a good job of
@@ -377,8 +376,7 @@ This could suggest that we might need to increase the
 <span>             FX111A <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="fl">0</span>, <span class="fl">1</span>, <span class="fl">1.5</span><span class="op">)</span></span>
 <span>           <span class="op">)</span><span class="op">)</span></span></code></pre></div>
 <p>Time for this code chunk to run: 0 seconds</p>
-<p><img src="..%2F..%2F..%2F..%2Ftmp%2FRtmp9fPDfQ%2Ftemp_libpath7ac71eeb1b9%2FscdneySpatialBiocAsia2024%2Fimages%2Fsee-seg-markers-1.png" width="672">Time
-for this code chunk to run: 0.04 seconds</p>
+<p><img src="reference/figures/see-seg-markers-1.png" style="border: 0px"></p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -445,7 +443,7 @@ in the function <code><a href="https://rdrr.io/pkg/SpatialDatasets/man/SpatialDa
 <span></span>
 <span><span class="va">cells</span><span class="op">$</span><span class="va">x</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SpatialExperiment/man/SpatialExperiment-methods.html" class="external-link">spatialCoords</a></span><span class="op">(</span><span class="va">cells</span><span class="op">)</span><span class="op">[</span>, <span class="st">"x"</span><span class="op">]</span></span>
 <span><span class="va">cells</span><span class="op">$</span><span class="va">y</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/pkg/SpatialExperiment/man/SpatialExperiment-methods.html" class="external-link">spatialCoords</a></span><span class="op">(</span><span class="va">cells</span><span class="op">)</span><span class="op">[</span>, <span class="st">"y"</span><span class="op">]</span></span></code></pre></div>
-<p>Time for this code chunk to run: 1.78 seconds</p>
+<p>Time for this code chunk to run: 1.81 seconds</p>
 <div class="section level4">
 <h4 id="normalise-the-data">Normalise the data<a class="anchor" aria-label="anchor" href="#normalise-the-data"></a>
 </h4>
@@ -469,7 +467,7 @@ see what is considered a CD3- cell, and what is a CD3+ cell.</p>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/cd3-density-1.png" width="480">Time
-for this code chunk to run: 2.85 seconds</p>
+for this code chunk to run: 2.73 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <p>Can we see what is a CD3+ vs a CD3- cell here?</p>
@@ -507,7 +505,7 @@ images.</p>
 <span>  colour_by <span class="op">=</span> <span class="st">"imageID"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/umap-1.png" width="700">Time
-for this code chunk to run: 98.21 seconds</p>
+for this code chunk to run: 96.43 seconds</p>
 <p>We can transform and normalise our data using the
 <code>normalizeCells</code> function. In the
 <code><a href="https://sydneybiox.github.io/simpleSeg/reference/normalizeCells.html" class="external-link">normalizeCells()</a></code> function, we specify the following
@@ -547,7 +545,7 @@ at least observe a clear CD3+ peak at 1.00, and a CD3- peak at around
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/geom_density.html" class="external-link">geom_density</a></span><span class="op">(</span><span class="op">)</span> <span class="op">+</span> </span>
 <span>  <span class="fu"><a href="https://ggplot2.tidyverse.org/reference/theme.html" class="external-link">theme</a></span><span class="op">(</span>legend.position <span class="op">=</span> <span class="st">"none"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/normalisation-1.png" width="480">Time
-for this code chunk to run: 8.15 seconds</p>
+for this code chunk to run: 7.91 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <p>Can we see what is a CD3+ vs a CD3- cell here?</p>
@@ -571,7 +569,7 @@ for this code chunk to run: 8.15 seconds</p>
 <span>  colour_by <span class="op">=</span> <span class="st">"imageID"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/norm-umap-1.png" width="700">Time
-for this code chunk to run: 101.57 seconds</p>
+for this code chunk to run: 99.73 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -605,7 +603,7 @@ clusters under <code>numClusters</code>.</p>
 <span>  assay <span class="op">=</span> <span class="st">"norm"</span>,</span>
 <span>  numClusters <span class="op">=</span> <span class="fl">10</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 3.32 seconds</p>
+<p>Time for this code chunk to run: 3.28 seconds</p>
 <p>We can also observe how reasonable our choice of <code>k = 10</code>
 was, using the <code><a href="https://rdrr.io/pkg/FuseSOM/man/estimateNumCluster.html" class="external-link">estimateNumCluster()</a></code> and
 <code><a href="https://rdrr.io/pkg/FuseSOM/man/optiPlot.html" class="external-link">optiPlot()</a></code> functions. Here we examine the Gap method, but
@@ -652,7 +650,7 @@ cells.</p>
 <span>  block <span class="op">=</span> <span class="st">"clusters"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/cluster-heatmap-1.png" width="700">Time
-for this code chunk to run: 0.56 seconds</p>
+for this code chunk to run: 0.53 seconds</p>
 <p>Given domain-specific knowledge of the tumour-immune landscape, we
 can go ahead and annotate these clusters as cell types given their
 expression profiles.</p>
@@ -682,7 +680,7 @@ surrounded by tumour cells.</p>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">imageID</span> <span class="op">==</span> <span class="st">"F3"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/scater/man/plotReducedDim.html" class="external-link">plotReducedDim</a></span><span class="op">(</span><span class="st">"spatialCoords"</span>, colour_by <span class="op">=</span> <span class="st">"cellType"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/visualise-imageF3-1.png" width="700">Time
-for this code chunk to run: 0.75 seconds</p>
+for this code chunk to run: 0.73 seconds</p>
 <p>We find it always useful to check the number of cells in each
 cluster.</p>
 <div class="sourceCode" id="cb22"><pre class="downlit sourceCode r">
@@ -713,7 +711,7 @@ out.</p>
 <span>  colour_by <span class="op">=</span> <span class="st">"cellType"</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/umap-celltype-1.png" width="700">Time
-for this code chunk to run: 1.04 seconds</p>
+for this code chunk to run: 1.03 seconds</p>
 </div>
 </div>
 <div class="section level3">
@@ -765,7 +763,7 @@ function.</p>
 <span><span class="fu"><a href="https://sydneybiox.github.io/spicyR/reference/signifPlot.html" class="external-link">signifPlot</a></span><span class="op">(</span><span class="va">spicyTest</span>,</span>
 <span>           fdr <span class="op">=</span> <span class="cn">TRUE</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/signifPlot-1.png" width="700">Time
-for this code chunk to run: 0.42 seconds</p>
+for this code chunk to run: 0.41 seconds</p>
 <div class="question">
 <p><strong>Questions</strong> 1. Which cell types appear to have
 significant co-localistion/dispersion? 2. Does this align with what we
@@ -808,7 +806,7 @@ distinct spatial ordering.</p>
 <span>  cellType <span class="op">=</span> <span class="st">"cellType"</span>,</span>
 <span>  BPPARAM <span class="op">=</span> <span class="va">BPPARAM</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 36.3 seconds</p>
+<p>Time for this code chunk to run: 35.63 seconds</p>
 <p>To save time the results of the above code have been saved and can be
 loaded in.</p>
 <div class="section level4">
@@ -837,7 +835,7 @@ F3.</p>
 <span>  <span class="fu"><a href="https://dplyr.tidyverse.org/reference/filter.html" class="external-link">filter</a></span><span class="op">(</span><span class="va">imageID</span> <span class="op">==</span> <span class="st">"F3"</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/pkg/scater/man/plotReducedDim.html" class="external-link">plotReducedDim</a></span><span class="op">(</span><span class="st">"spatialCoords"</span>, colour_by <span class="op">=</span> <span class="st">"region"</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/plotReducedDim-1.png" width="700">Time
-for this code chunk to run: 0.68 seconds</p>
+for this code chunk to run: 0.67 seconds</p>
 <p>While much slower, the <code>hatchingPlot</code> function can also be
 used to view regions of co-localisation simultaneously with the cell
 type calls.</p>
@@ -850,7 +848,7 @@ type calls.</p>
 <span>  nbp <span class="op">=</span> <span class="fl">300</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/hatchingPlot-1.png" width="700">Time
-for this code chunk to run: 74.48 seconds</p>
+for this code chunk to run: 74.09 seconds</p>
 <div class="question">
 <p><strong>Questions</strong> 1. How could the choice of <code>k</code>
 affect our clustering results? 2. Looking at the graph above, would a
@@ -910,7 +908,7 @@ further explored within the <code>Statial</code> package vignette</p>
 <span>  cellType <span class="op">=</span> <span class="st">"cellType"</span>,</span>
 <span>  spatialCoords <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"x"</span>, <span class="st">"y"</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 7.23 seconds</p>
+<p>Time for this code chunk to run: 7.08 seconds</p>
 <p>We can then visualise an example image, specified with
 <code>image = "F3"</code> and a particular marker interaction with cell
 type localisation. To visualise these changes, we specify two cell types
@@ -943,7 +941,7 @@ of tumour cells increases.</p>
 <pre><code><span><span class="co">#&gt; </span></span>
 <span><span class="co">#&gt; $scatter</span></span></code></pre>
 <p><img src="scdneySpatial_files/figure-html/plotStateChange-2.png" width="700">
-Time for this code chunk to run: 0.88 seconds</p>
+Time for this code chunk to run: 0.89 seconds</p>
 <p>SpatioMark aims to holistically uncover all such significant
 relationships by looking at all interactions across all images. The
 <code><a href="https://sydneybiox.github.io/Statial/reference/calcStateChanges.html" class="external-link">calcStateChanges()</a></code> function provided by Statial can be
@@ -984,7 +982,7 @@ across the entire dataset.</p>
 <span><span class="co">#&gt; 23696 3.239532e-29 1.903862e-27</span></span>
 <span><span class="co">#&gt; 11426 4.839241e-29 2.825645e-27</span></span>
 <span><span class="co">#&gt; 23758 1.030900e-28 5.930114e-27</span></span></code></pre>
-<p>Time for this code chunk to run: 5.97 seconds</p>
+<p>Time for this code chunk to run: 5.85 seconds</p>
 <p>The results from our SpatioMark outputs can be converted from a
 <code>data.frame</code> to a <code>matrix</code>, using the
 <code><a href="https://sydneybiox.github.io/Statial/reference/prepMatrix.html" class="external-link">prepMatrix()</a></code> function. Note, the choice of extracting
@@ -1051,7 +1049,7 @@ for FDR.</p>
 <span></span>
 <span><span class="co"># Create data frame with all pairwise combinations of cells</span></span>
 <span><span class="va">treeDf</span> <span class="op">=</span> <span class="fu">Statial</span><span class="fu">::</span><span class="fu"><a href="https://sydneybiox.github.io/Statial/reference/parentCombinations.html" class="external-link">parentCombinations</a></span><span class="op">(</span><span class="va">all</span>, parentList <span class="op">=</span> <span class="va">parentList</span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 1.33 seconds</p>
+<p>Time for this code chunk to run: 1.32 seconds</p>
 <div class="sourceCode" id="cb47"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="va">kontext</span> <span class="op">=</span> <span class="fu">Statial</span><span class="fu">::</span><span class="fu"><a href="https://sydneybiox.github.io/Statial/reference/Kontextual.html" class="external-link">Kontextual</a></span><span class="op">(</span></span>
 <span>  cells <span class="op">=</span> <span class="va">cells</span>,</span>
@@ -1086,7 +1084,7 @@ so we use the <code>alternateResult</code> argument.</p>
 <span><span class="co"># Plot results</span></span>
 <span><span class="fu"><a href="https://sydneybiox.github.io/spicyR/reference/signifPlot.html" class="external-link">signifPlot</a></span><span class="op">(</span><span class="va">kontextOutcome</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/kontextOutcome-1.png" width="960">Time
-for this code chunk to run: 7.71 seconds</p>
+for this code chunk to run: 7.84 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -1158,7 +1156,7 @@ you?</li>
 <code class="sourceCode R"><span><span class="co"># Function from inst/extdata/utils.R file</span></span>
 <span><span class="fu">plotKontextual</span><span class="op">(</span><span class="va">relationship</span>, imageChoose <span class="op">=</span> <span class="va">image</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/viewingKontextual-2.png" width="700">Time
-for this code chunk to run: 0.85 seconds</p>
+for this code chunk to run: 0.84 seconds</p>
 </div>
 </div>
 </div>
@@ -1208,7 +1206,7 @@ from <code>SpatioMark</code></p>
 <span></span>
 <span><span class="co"># Add Kontextual features</span></span>
 <span><span class="va">data</span><span class="op">[[</span><span class="st">"Kontextual"</span><span class="op">]</span><span class="op">]</span> <span class="op">&lt;-</span> <span class="va">kontextMat</span></span></code></pre></div>
-<p>Time for this code chunk to run: 0.1 seconds</p>
+<p>Time for this code chunk to run: 0.09 seconds</p>
 <p>We have saved the data list and outcomes for convenience.</p>
 <div class="sourceCode" id="cb55"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"data.rda"</span>, package <span class="op">=</span> <span class="st">"scdneySpatialBiocAsia2024"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
@@ -1232,7 +1230,7 @@ from <code>SpatioMark</code></p>
 <p>We have saved the results for convenience.</p>
 <div class="sourceCode" id="cb57"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/base/load.html" class="external-link">load</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"extdata"</span>, <span class="st">"cv.rda"</span>, package <span class="op">=</span> <span class="st">"scdneySpatialBiocAsia2024"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p>Time for this code chunk to run: 0.86 seconds</p>
+<p>Time for this code chunk to run: 0.84 seconds</p>
 <div class="section level4">
 <h4 id="visualise-cross-validated-prediction-performance">Visualise cross-validated prediction performance<a class="anchor" aria-label="anchor" href="#visualise-cross-validated-prediction-performance"></a>
 </h4>
@@ -1246,7 +1244,7 @@ AUC from each repeat of the 5-fold cross-validation.</p>
 <span>  orderingList <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span><span class="st">"Assay Name"</span> <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/c.html" class="external-link">c</a></span><span class="op">(</span><span class="st">"Proportions"</span>, <span class="st">"SpicyR"</span>, <span class="st">"LisaClust"</span>, <span class="st">"Kontextual"</span>, <span class="st">"SpatioMark"</span><span class="op">)</span><span class="op">)</span></span>
 <span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/performancePlot-1.png" width="700">Time
-for this code chunk to run: 10.65 seconds</p>
+for this code chunk to run: 10.48 seconds</p>
 <div class="question">
 <p><strong>Questions</strong></p>
 <ol style="list-style-type: decimal">
@@ -1259,7 +1257,7 @@ for this code chunk to run: 10.65 seconds</p>
 <code class="sourceCode R"><span><span class="fu"><a href="https://sydneybiox.github.io/ClassifyR/reference/samplesMetricMap.html" class="external-link">samplesMetricMap</a></span><span class="op">(</span><span class="va">cv</span><span class="op">)</span> <span class="op">|&gt;</span> </span>
 <span>  <span class="fu"><a href="https://rdrr.io/r/graphics/plot.default.html" class="external-link">plot</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <p><img src="scdneySpatial_files/figure-html/sampleMetrics-1.png" width="700"><img src="scdneySpatial_files/figure-html/sampleMetrics-2.png" width="700">Time
-for this code chunk to run: 0.92 seconds</p>
+for this code chunk to run: 0.9 seconds</p>
 <p>The following code chunk demonstrates how we might use information
 from multiple matrices to perform classification.</p>
 <div class="sourceCode" id="cb60"><pre class="downlit sourceCode r">
@@ -1282,11 +1280,8 @@ from multiple matrices to perform classification.</p>
 <span>  characteristicsList <span class="op">=</span> <span class="fu"><a href="https://rdrr.io/r/base/list.html" class="external-link">list</a></span><span class="op">(</span>x <span class="op">=</span> <span class="st">"Assay Name"</span><span class="op">)</span>,</span>
 <span><span class="op">)</span></span></code></pre></div>
 <p>Time for this code chunk to run: 0 seconds</p>
+<p><img src="reference/figures/plot.png" style="border: 0px"></p>
 <div class="sourceCode" id="cb61"><pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">knitr</span><span class="fu">::</span><span class="fu"><a href="https://rdrr.io/pkg/knitr/man/include_graphics.html" class="external-link">include_graphics</a></span><span class="op">(</span><span class="fu"><a href="https://rdrr.io/r/base/system.file.html" class="external-link">system.file</a></span><span class="op">(</span><span class="st">"images"</span>, <span class="st">"plot.png"</span>, package <span class="op">=</span> <span class="st">"scdneySpatialBiocAsia2024"</span><span class="op">)</span><span class="op">)</span></span></code></pre></div>
-<p><img src="..%2F..%2F..%2F..%2Ftmp%2FRtmp9fPDfQ%2Ftemp_libpath7ac71eeb1b9%2FscdneySpatialBiocAsia2024%2Fimages%2Fplot.png" width="1050">Time
-for this code chunk to run: 0.02 seconds</p>
-<div class="sourceCode" id="cb62"><pre class="downlit sourceCode r">
 <code class="sourceCode R"><span><span class="fu"><a href="https://rdrr.io/r/utils/sessionInfo.html" class="external-link">sessionInfo</a></span><span class="op">(</span><span class="op">)</span></span></code></pre></div>
 <pre><code><span><span class="co">#&gt; R version 4.4.1 (2024-06-14)</span></span>
 <span><span class="co">#&gt; Platform: x86_64-pc-linux-gnu</span></span>
@@ -1453,7 +1448,7 @@ for this code chunk to run: 0.02 seconds</p>
 <span><span class="co">#&gt; [227] uuid_1.2-1                  lmerTest_3.1-3             </span></span>
 <span><span class="co">#&gt; [229] ggnewscale_0.5.0            fansi_1.0.6                </span></span>
 <span><span class="co">#&gt; [231] beeswarm_0.4.0</span></span></code></pre>
-<p>Time for this code chunk to run: 0.31 seconds</p>
+<p>Time for this code chunk to run: 0.08 seconds</p>
 </div>
 </div>
   </main><aside class="col-md-3"><nav id="toc" aria-label="Table of contents"><h2>On this page</h2>
